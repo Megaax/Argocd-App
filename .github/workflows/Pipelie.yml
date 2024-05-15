@@ -64,6 +64,7 @@ jobs:
         git checkout main
         echo "Listing files in the repository:"
         ls -l
+        cd manifest
         echo "Updating Image tag in deployment.yaml file"
         sed -i "s,mohamedmagdykhamis/todo-app:.*,mohamedmagdykhamis/todo-app:${{ github.sha }}," manifest/deployment.yaml
         git add deployment.yaml && git commit -m "Updated Docker image tag to ${{ github.sha }}"
