@@ -60,7 +60,6 @@ jobs:
         echo "cloning config repo Argocd-manifest"
         git clone https://oauth2:${{ secrets.Git_TOKEN }}@github.com/${{ github.repository_owner }}/Argocd-manifest.git
         cd Argocd-manifest
-        cd mainfest
         echo "checkout main branch"
         git checkout main
         echo "Updating Image tag in deployment.yaml file"
