@@ -63,6 +63,6 @@ jobs:
         echo "checkout main branch"
         git checkout main
         echo "Updating Image tag in deployment.yaml file"
-        sed -i "s,mohamedmagdykhamis/todo-app:.*,mohamedmagdykhamis/todo-app:${{ github.sha }}," deployment.yaml
+        sed -i "s,mohamedmagdykhamis/todo-app:.*,mohamedmagdykhamis/todo-app:${{ github.sha }}," manifest/deployment.yaml
         git add deployment.yaml && git commit -m "Updated Docker image tag to ${{ github.sha }}"
         git push
