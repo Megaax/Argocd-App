@@ -56,9 +56,9 @@ jobs:
       run: |
         echo "promoting into dev environment!"
         git config --global user.email actions@github.com && git config --global user.name GitHub Actions
-        echo "cloning config repo argocd-react-manifest"
-        git clone https://oauth2:${{ secrets.CI_TOKEN }}@github.com/${{ github.repository_owner }}/argocd-react-manifest.git
-        cd argocd-react-manifest
+        echo "cloning config repo Argocd-manifest"
+        git clone https://oauth2:${{ secrets.Git_TOKEN }}@github.com/${{ github.repository_owner }}/Argocd-manifest.git
+        cd kube_manifest
         echo "checkout main branch"
         git checkout main
         echo "Updating Image tag in values.yaml file"
