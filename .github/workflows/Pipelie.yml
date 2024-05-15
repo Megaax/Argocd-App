@@ -61,7 +61,7 @@ jobs:
         cd Argocd-manifest
         echo "checkout main branch"
         git checkout main
-        echo "Updating Image tag in values.yaml file"
-        sed -i "s,image:.*,image: mohamedmagdykhamis/todo-app:${{ github.sha }}," reactapp/values.yaml
-        git add . && git commit -m "Updated Image tag to ${{ github.sha }}"
+        echo "Updating Image tag in deployment.yaml file"
+        sed -i "s,image:.*,image: mohamedmagdykhamis/todo-app:${{ github.sha }}," deployment.yaml
+        git add deployment.yaml && git commit -m "Updated Docker image tag to ${{ github.sha }}"
         git push
