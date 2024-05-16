@@ -28,3 +28,6 @@ First, we have a **GitHub repository that contains the source code of the applic
    - `Git_TOKEN`: A personal access token with the `repo` scope to access the Manifest Repository
 3. Update your Argo CD application to watch the Manifest Repository.
 4. Push a change to the main branch of the repository to trigger the CI/CD pipeline.
+
+## Link to Deployment Repository 
+- ```https://github.com/Megaax/Argocd-manifest```
